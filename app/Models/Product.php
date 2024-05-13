@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
-
 /***
  * Class Product
- * @property int          $id
- * @property string       $title
- * @property string|NULL  $image
- * @property string|NULL  $description
- * @property int          $price
- * @property int          $category_id
+ * @property int         $id
+ * @property string      $title
+ * @property string|NULL $image
+ * @property string|NULL $description
+ * @property int         $price
+ * @property int         $category_id
  */
 class Product extends AModel
 {
@@ -44,14 +43,14 @@ class Product extends AModel
 		$this->title = $title;
 	}
 
-	/*** @return string|null */
+	/*** @return string|NULL */
 	public function getImage(): ?string
 	{
 		return $this->image;
 	}
 
 	/**
-	 * @param string|null $image
+	 * @param string|NULL $image
 	 * @return void
 	 */
 	public function setImage(?string $image): void
@@ -59,14 +58,14 @@ class Product extends AModel
 		$this->image = $image;
 	}
 
-	/*** @return string|null */
+	/*** @return string|NULL */
 	public function getDescription(): ?string
 	{
 		return $this->description;
 	}
 
 	/**
-	 * @param string|null $description
+	 * @param string|NULL $description
 	 * @return void
 	 */
 	public function setDescription(?string $description): void
@@ -96,11 +95,11 @@ class Product extends AModel
 	}
 
 	/**
-	 * @param int $category_id
+	 * @param int $categoryId
 	 * @return void
 	 */
-	public function setCategoryId(int $category_id): void
+	public function setCategoryId(int $categoryId): void
 	{
-		$this->category_id = $category_id;
+		$this->category_id = $categoryId;
 	}
 }
