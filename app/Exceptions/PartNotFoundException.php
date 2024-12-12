@@ -4,7 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 
-class ProductNotFoundException extends Exception
+class PartNotFoundException extends Exception
 {
     protected $message = "Product Not Found";
 }

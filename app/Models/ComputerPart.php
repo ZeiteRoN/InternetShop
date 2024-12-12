@@ -11,9 +11,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property  string $description
  * @property  float $price
  * @property  integer $quantity
- * @property  string $imagePath
- * @property  integer $categoryId
+ * @property  string $image_path
+ * @property  integer $category_id
  * @property  array $characteristics
+ * @method static where(string $column, string $operator, string $value)
  * @package App\Models
  */
 class ComputerPart extends AModel
@@ -92,7 +93,7 @@ class ComputerPart extends AModel
     /*** @return string */
     public function getImagePath(): string
     {
-        return $this->imagePath;
+        return $this->image_path;
     }
 
     /**
@@ -101,13 +102,13 @@ class ComputerPart extends AModel
      */
     public function setImagePath(string $imagePath): void
     {
-        $this->imagePath = $imagePath;
+        $this->image_path = $imagePath;
     }
 
     /*** @return int */
     public function getCategoryId(): int
     {
-        return $this->categoryId;
+        return $this->category_id;
     }
 
     /**
@@ -116,7 +117,7 @@ class ComputerPart extends AModel
      */
     public function setCategoryId(int $categoryId): void
     {
-        $this->categoryId = $categoryId;
+        $this->category_id = $categoryId;
     }
 
     /*** @return array */
