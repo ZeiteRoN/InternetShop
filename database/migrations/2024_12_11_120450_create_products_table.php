@@ -18,9 +18,8 @@ return new class extends Migration {
             $table->integer('quantity');
             $table->string('image_path')->nullable();
             $table->bigInteger('category_id')->unsigned();
-            $table->json('characteristics')->nullable();
-            $table->timestamp("created_at")->useCurrent()->nullable();
-            $table->timestamp("updated_at")->useCurrentOnUpdate()->nullable();
+            $table->timestamp("created_at")->useCurrent();
+            $table->timestamp("updated_at")->useCurrentOnUpdate();
         });
     }
 
